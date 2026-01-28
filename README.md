@@ -86,7 +86,12 @@ Create or update `~/.cursor/mcp.json`:
         "NUTANIX_ENDPOINT": "your-prism-central-ip-or-hostname",
         "NUTANIX_USERNAME": "your-username", 
         "NUTANIX_PASSWORD": "your-password",
-        "NUTANIX_INSECURE": "true"
+        "NUTANIX_INSECURE": "true",
+        "SSH_HOST"     : "pe-ip",
+        "SSH_USERNAME" : "nutanix",
+        "SSH_PASSWORD" : "pass",
+        "SSH_PORT"     : "22",
+        "SSH_LOG_ROOT"     : "/home/nutanix/data/logs"
       }
     }
   }
