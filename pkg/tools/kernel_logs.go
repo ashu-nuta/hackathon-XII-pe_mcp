@@ -19,7 +19,7 @@ const (
 // KernelLogsCritical defines the kernel_logs_critical tool.
 func KernelLogsCritical() mcp.Tool {
 	return mcp.NewTool("kernel_logs_critical",
-		mcp.WithDescription("Fetch recent critical kernel logs from ~/../../var/log/messages on the SSH host"),
+		mcp.WithDescription("Fetch recent critical kernel logs from ~/../../var/log/messages on each SSH_HOST entry"),
 		mcp.WithString("lines",
 			mcp.Description("Optional number of lines to return (default 50, max 500)"),
 		),
@@ -50,7 +50,7 @@ func KernelLogsCriticalHandler() server.ToolHandlerFunc {
 		}
 
 		command := buildKernelCriticalCommand(lookback, lines)
-		output, err := executeSSHCommandWithNewClient(cfg, command)
+		output, err := runSSHCommandOnHosts(cfg, command)
 		if err != nil {
 			return nil, err
 		}

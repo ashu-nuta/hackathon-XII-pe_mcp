@@ -24,9 +24,9 @@ type SSHConfig struct {
 // SSHExec defines the ssh_exec tool
 func SSHExec() mcp.Tool {
 	return mcp.NewTool("ssh_exec",
-		mcp.WithDescription("Execute a command on the SSH host and return combined output"),
+		mcp.WithDescription("Execute a command on each SSH_HOST entry and return combined output"),
 		mcp.WithString("command",
-			mcp.Description("Command to execute on the SSH host"),
+			mcp.Description("Command to execute on each SSH host"),
 		),
 	)
 }
@@ -51,7 +51,7 @@ func SSHExecHandler() server.ToolHandlerFunc {
 			return nil, err
 		}
 
-		output, err := executeSSHCommandWithNewClient(cfg, command)
+		output, err := runSSHCommandOnHosts(cfg, command)
 		if err != nil {
 			return nil, err
 		}
@@ -63,9 +63,9 @@ func SSHExecHandler() server.ToolHandlerFunc {
 // SSHExecBatch defines the ssh_exec_batch tool
 func SSHExecBatch() mcp.Tool {
 	return mcp.NewTool("ssh_exec_batch",
-		mcp.WithDescription("Execute multiple commands on the SSH host in order"),
+		mcp.WithDescription("Execute multiple commands on each SSH_HOST entry in order"),
 		mcp.WithString("commands",
-			mcp.Description("Newline-separated commands to execute in order"),
+			mcp.Description("Newline-separated commands to execute in order on each SSH host"),
 		),
 	)
 }
@@ -91,29 +91,12 @@ func SSHExecBatchHandler() server.ToolHandlerFunc {
 			return nil, err
 		}
 
-		client, err := newSSHClient(cfg)
+		output, err := runSSHCommandsOnHosts(cfg, commands)
 		if err != nil {
 			return nil, err
 		}
-		defer client.Close()
 
-		var outputBuilder strings.Builder
-		for i, cmd := range commands {
-			result, err := executeSSHCommand(client, cmd)
-			if err != nil {
-				return nil, fmt.Errorf("command %d failed: %w", i+1, err)
-			}
-
-			if i > 0 {
-				outputBuilder.WriteString("\n")
-			}
-			outputBuilder.WriteString("$ ")
-			outputBuilder.WriteString(cmd)
-			outputBuilder.WriteString("\n")
-			outputBuilder.Write(result)
-		}
-
-		return mcp.NewToolResultText(outputBuilder.String()), nil
+		return mcp.NewToolResultText(output), nil
 	}
 }
 
@@ -197,9 +180,17 @@ func executeSSHCommand(client *ssh.Client, command string) ([]byte, error) {
 	}
 	defer session.Close()
 
+	applyShellSafeEnv(session)
+
 	output, err := session.CombinedOutput(command)
 	if err != nil {
 		return nil, fmt.Errorf("failed to execute command: %w (output: %s)", err, string(output))
 	}
 	return output, nil
+}
+
+func applyShellSafeEnv(session *ssh.Session) {
+	// Prevent non-interactive shells from sourcing problematic startup files.
+	_ = session.Setenv("BASH_ENV", "/dev/null")
+	_ = session.Setenv("ENV", "/dev/null")
 }

@@ -1,0 +1,123 @@
+=== kernel_logs ===
+2026-01-28T11:15:25.556718+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2617710]: Execvp failed. Err: No such file or directory
+2026-01-28T11:16:25.846482+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2618516]: Execvp failed. Err: No such file or directory
+2026-01-28T11:17:25.602952+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2619476]: Execvp failed. Err: No such file or directory
+2026-01-28T11:18:25.293622+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2620339]: Execvp failed. Err: No such file or directory
+2026-01-28T11:19:26.126419+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2621151]: Execvp failed. Err: No such file or directory
+2026-01-28T11:20:25.680303+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2622216]: Execvp failed. Err: No such file or directory
+2026-01-28T11:20:49.858202+00:00 NTNX-18FM6G150083-C-CVM kernel: [429953.329416] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=10.96.0.72 DST=255.255.255.255 LEN=288 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=268 
+2026-01-28T11:20:52.011867+00:00 NTNX-18FM6G150083-C-CVM kernel: [429955.483965] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=10.96.0.72 DST=255.255.255.255 LEN=288 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=268 
+2026-01-28T11:20:54.163790+00:00 NTNX-18FM6G150083-C-CVM kernel: [429957.635922] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=10.96.0.72 DST=255.255.255.255 LEN=288 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=268 
+2026-01-28T11:20:56.313805+00:00 NTNX-18FM6G150083-C-CVM kernel: [429959.785960] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=0.0.0.0 DST=255.255.255.255 LEN=292 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=272 
+2026-01-28T11:20:59.500820+00:00 NTNX-18FM6G150083-C-CVM kernel: [429962.972988] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=0.0.0.0 DST=255.255.255.255 LEN=292 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=272 
+2026-01-28T11:21:25.338467+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2623018]: Execvp failed. Err: No such file or directory
+2026-01-28T11:22:25.731499+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2623969]: Execvp failed. Err: No such file or directory
+2026-01-28T11:23:25.254401+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2624757]: Execvp failed. Err: No such file or directory
+2026-01-28T11:24:25.970494+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2625647]: Execvp failed. Err: No such file or directory
+2026-01-28T11:25:25.460232+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2626702]: Execvp failed. Err: No such file or directory
+2026-01-28T11:25:58.161198+00:00 NTNX-18FM6G150083-C-CVM kernel: [430261.636714] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:50:6b:8d:a2:1d:bc:08:00 SRC=10.96.2.88 DST=10.96.3.255 LEN=229 TOS=0x00 PREC=0x00 TTL=128 ID=12948 PROTO=UDP SPT=138 DPT=138 LEN=209 
+2026-01-28T11:26:25.406177+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2627678]: Execvp failed. Err: No such file or directory
+2026-01-28T11:27:25.177478+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2628526]: Execvp failed. Err: No such file or directory
+2026-01-28T11:28:25.982432+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2629357]: Execvp failed. Err: No such file or directory
+2026-01-28T11:29:25.995840+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2630224]: Execvp failed. Err: No such file or directory
+2026-01-28T11:30:25.226134+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2631328]: Execvp failed. Err: No such file or directory
+2026-01-28T11:31:25.484017+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2632295]: Execvp failed. Err: No such file or directory
+2026-01-28T11:32:25.736970+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2633450]: Execvp failed. Err: No such file or directory
+2026-01-28T11:33:25.597773+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2634412]: Execvp failed. Err: No such file or directory
+2026-01-28T11:34:25.336515+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2635278]: Execvp failed. Err: No such file or directory
+2026-01-28T11:35:25.322699+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2636319]: Execvp failed. Err: No such file or directory
+2026-01-28T11:36:02.062267+00:00 NTNX-18FM6G150083-C-CVM kernel: [430865.538100] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=10.96.0.72 DST=255.255.255.255 LEN=288 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=268 
+2026-01-28T11:36:04.217207+00:00 NTNX-18FM6G150083-C-CVM kernel: [430867.700556] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=10.96.0.72 DST=255.255.255.255 LEN=288 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=268 
+2026-01-28T11:36:06.371218+00:00 NTNX-18FM6G150083-C-CVM kernel: [430869.854587] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=10.96.0.72 DST=255.255.255.255 LEN=288 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=268 
+2026-01-28T11:36:08.529202+00:00 NTNX-18FM6G150083-C-CVM kernel: [430872.012598] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=0.0.0.0 DST=255.255.255.255 LEN=292 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=272 
+2026-01-28T11:36:11.718184+00:00 NTNX-18FM6G150083-C-CVM kernel: [430875.201612] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:52:54:00:ff:71:90:08:00 SRC=0.0.0.0 DST=255.255.255.255 LEN=292 TOS=0x10 PREC=0x00 TTL=16 ID=65535 PROTO=UDP SPT=68 DPT=67 LEN=272 
+2026-01-28T11:36:25.615244+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2637176]: Execvp failed. Err: No such file or directory
+2026-01-28T11:37:25.065878+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2638021]: Execvp failed. Err: No such file or directory
+2026-01-28T11:37:55.713409+00:00 NTNX-18FM6G150083-C-CVM kernel: [430979.198130] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:50:6b:8d:a2:1d:bc:08:00 SRC=10.96.2.88 DST=10.96.3.255 LEN=229 TOS=0x00 PREC=0x00 TTL=128 ID=12949 PROTO=UDP SPT=138 DPT=138 LEN=209 
+2026-01-28T11:38:25.529809+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2638899]: Execvp failed. Err: No such file or directory
+2026-01-28T11:39:25.476253+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2639730]: Execvp failed. Err: No such file or directory
+2026-01-28T11:40:25.712941+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2640748]: Execvp failed. Err: No such file or directory
+2026-01-28T11:41:25.062984+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2641743]: Execvp failed. Err: No such file or directory
+2026-01-28T11:42:25.506868+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2642628]: Execvp failed. Err: No such file or directory
+2026-01-28T11:43:25.802142+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2643503]: Execvp failed. Err: No such file or directory
+2026-01-28T11:44:25.828199+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2644413]: Execvp failed. Err: No such file or directory
+2026-01-28T11:45:14.056201+00:00 NTNX-18FM6G150083-C-CVM kernel: [431417.546300] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:50:6b:8d:f8:ba:47:08:00 SRC=0.0.0.0 DST=255.255.255.255 LEN=328 TOS=0x10 PREC=0x00 TTL=128 ID=0 PROTO=UDP SPT=68 DPT=67 LEN=308 
+2026-01-28T11:45:21.431150+00:00 NTNX-18FM6G150083-C-CVM kernel: [431424.921363] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:50:6b:8d:c0:d4:74:08:00 SRC=0.0.0.0 DST=255.255.255.255 LEN=328 TOS=0x10 PREC=0x00 TTL=128 ID=0 PROTO=UDP SPT=68 DPT=67 LEN=308 
+2026-01-28T11:45:25.300084+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2645414]: Execvp failed. Err: No such file or directory
+2026-01-28T11:46:25.520755+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2646311]: Execvp failed. Err: No such file or directory
+2026-01-28T11:47:25.414571+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2647110]: Execvp failed. Err: No such file or directory
+2026-01-28T11:48:25.693115+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2648153]: Execvp failed. Err: No such file or directory
+2026-01-28T11:49:25.362083+00:00 NTNX-18FM6G150083-C-CVM modify_fd_and_exec[2648973]: Execvp failed. Err: No such file or directory
+2026-01-28T11:49:55.565091+00:00 NTNX-18FM6G150083-C-CVM kernel: [431699.058692] IPTables Packet Dropped: IN=eth0 OUT= MAC=ff:ff:ff:ff:ff:ff:50:6b:8d:a2:1d:bc:08:00 SRC=10.96.2.88 DST=10.96.3.255 LEN=229 TOS=0x00 PREC=0x00 TTL=128 ID=12953 PROTO=UDP SPT=138 DPT=138 LEN=209 
+
+=== crash_logs ===
+file_count=0
+no crash logs found
+
+=== fatal_service_logs ===
+fatal_files=3
+--- acropolis.FATAL ---
+2026-01-23 12:06:38,644Z ERROR 107499 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 107501 exited with status: 1
+--- cerebro.FATAL ---
+Log file created at: 2026/01/23 12:11:35
+Running on machine: ntnx-18fm6g150083-c-cvm
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu[Z] threadid file:line] msg
+F20260123 12:11:35.869493Z 105171 cerebro.cc:1626] QFATAL Relinquish leadership request received, exiting for self-restart
+--- curator.FATAL ---
+Log file created at: 2026/01/23 12:05:47
+Running on machine: ntnx-18fm6g150083-c-cvm
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu[Z] threadid file:line] msg
+F20260123 12:05:47.922454Z 104678 curator_disk_manager.cc:1246] QFATAL No usable Curator disks found; unsetting primary disk id -1
+--- uhura.FATAL ---
+2026-01-23 12:06:12,724Z ERROR 108679 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 108681 exited with status: 1
+--- xtrim.FATAL ---
+2026-01-28 11:49:34,460Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649130 exited with status: 1
+2026-01-28 11:49:35,462Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649143 exited with status: 1
+2026-01-28 11:49:36,462Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649145 exited with status: 1
+2026-01-28 11:49:37,463Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649155 exited with status: 1
+2026-01-28 11:49:38,466Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649156 exited with status: 1
+2026-01-28 11:49:39,467Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649157 exited with status: 1
+2026-01-28 11:49:40,469Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649169 exited with status: 1
+2026-01-28 11:49:41,469Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649181 exited with status: 1
+2026-01-28 11:49:42,470Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649197 exited with status: 1
+2026-01-28 11:49:43,471Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649211 exited with status: 1
+2026-01-28 11:49:44,472Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649212 exited with status: 1
+2026-01-28 11:49:45,472Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649223 exited with status: 1
+2026-01-28 11:49:46,474Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649237 exited with status: 1
+2026-01-28 11:49:47,475Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649250 exited with status: 1
+2026-01-28 11:49:48,475Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649263 exited with status: 1
+2026-01-28 11:49:49,477Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649275 exited with status: 1
+2026-01-28 11:49:50,477Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649285 exited with status: 1
+2026-01-28 11:49:51,479Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649296 exited with status: 1
+2026-01-28 11:49:52,480Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649300 exited with status: 1
+2026-01-28 11:49:53,506Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649354 exited with status: 1
+2026-01-28 11:49:54,506Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649372 exited with status: 1
+2026-01-28 11:49:55,507Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649399 exited with status: 1
+2026-01-28 11:49:56,508Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649401 exited with status: 1
+2026-01-28 11:49:57,509Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649405 exited with status: 1
+2026-01-28 11:49:58,510Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649407 exited with status: 1
+2026-01-28 11:49:59,510Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649414 exited with status: 1
+2026-01-28 11:50:00,511Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649436 exited with status: 1
+2026-01-28 11:50:01,512Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649437 exited with status: 1
+2026-01-28 11:50:02,512Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649662 exited with status: 1
+2026-01-28 11:50:03,513Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649663 exited with status: 1
+2026-01-28 11:50:04,513Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649678 exited with status: 1
+2026-01-28 11:50:05,514Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649710 exited with status: 1
+2026-01-28 11:50:06,514Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649728 exited with status: 1
+2026-01-28 11:50:07,515Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649834 exited with status: 1
+2026-01-28 11:50:08,515Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649849 exited with status: 1
+2026-01-28 11:50:09,516Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649892 exited with status: 1
+2026-01-28 11:50:10,517Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649908 exited with status: 1
+2026-01-28 11:50:11,517Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649914 exited with status: 1
+2026-01-28 11:50:12,518Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649936 exited with status: 1
+2026-01-28 11:50:13,518Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649944 exited with status: 1
+2026-01-28 11:50:14,519Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649951 exited with status: 1
+2026-01-28 11:50:15,519Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649975 exited with status: 1
+2026-01-28 11:50:16,520Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649983 exited with status: 1
+2026-01-28 11:50:17,521Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2649998 exited with status: 1
+2026-01-28 11:50:18,521Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2650004 exited with status: 1
+2026-01-28 11:50:19,522Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2650005 exited with status: 1
+2026-01-28 11:50:20,522Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2650015 exited with status: 1
+2026-01-28 11:50:21,523Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2650022 exited with status: 1
+2026-01-28 11:50:22,524Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2650034 exited with status: 1
+2026-01-28 11:50:23,524Z ERROR 114894 /src/bigtop/infra/infra_server/cluster/service_monitor/service_monitor.c:105 StartServiceMonitor: Child 2650036 exited with status: 1

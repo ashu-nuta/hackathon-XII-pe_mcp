@@ -19,7 +19,7 @@ const (
 // CrashLogsCritical defines the crash_logs_critical tool.
 func CrashLogsCritical() mcp.Tool {
 	return mcp.NewTool("crash_logs_critical",
-		mcp.WithDescription("Fetch and summarize critical crash logs from /home/log/crash on the SSH host"),
+		mcp.WithDescription("Fetch and summarize critical crash logs from /home/log/crash on each SSH_HOST entry"),
 		mcp.WithString("lines",
 			mcp.Description("Optional number of lines per file to return (default 50, max 500)"),
 		),
@@ -42,7 +42,7 @@ func CrashLogsCriticalHandler() server.ToolHandlerFunc {
 		}
 
 		command := buildCrashCriticalCommand(lines)
-		output, err := executeSSHCommandWithNewClient(cfg, command)
+		output, err := runSSHCommandOnHosts(cfg, command)
 		if err != nil {
 			return nil, err
 		}
@@ -85,4 +85,3 @@ func buildCrashCriticalCommand(lines int) string {
 		lines,
 	)
 }
-

@@ -26,7 +26,7 @@ const (
 // FetchService defines the fetch_service tool
 func FetchService() mcp.Tool {
 	return mcp.NewTool("fetch_service",
-		mcp.WithDescription("Fetch a file from /home/nutanix/data/logs via SSH and save locally"),
+		mcp.WithDescription("Fetch a file from /home/nutanix/data/logs via SSH for each SSH_HOST entry and save locally"),
 		mcp.WithString("path",
 			mcp.Description("Optional file path under /home/nutanix/data/logs (defaults to narsil.out)"),
 		),
@@ -79,18 +79,50 @@ func FetchServiceHandler() server.ToolHandlerFunc {
 
 		resolvedPath := path.Join(cfg.Root, requestedPath)
 
-		data, err := fetchViaSSHCommand(cfg, resolvedPath)
+		sshCfg := &SSHConfig{
+			Host:     cfg.Host,
+			Port:     cfg.Port,
+			User:     cfg.User,
+			Password: cfg.Password,
+			Timeout:  cfg.Timeout,
+		}
+
+		hosts, err := getSSHHosts(sshCfg)
 		if err != nil {
-			return nil, fmt.Errorf("Error: %w", err)
+			return nil, err
 		}
 
-		outputPath := path.Base(requestedPath)
-		if err := os.WriteFile(outputPath, data, 0644); err != nil {
-			return nil, fmt.Errorf("Error writing file: %w", err)
+		baseName := path.Base(requestedPath)
+		var outputBuilder strings.Builder
+		successes := 0
+		for i, host := range hosts {
+			if i > 0 {
+				outputBuilder.WriteString("\n")
+			}
+
+			hostCfg := *cfg
+			hostCfg.Host = host
+			data, err := fetchViaSSHCommand(&hostCfg, resolvedPath)
+			if err != nil {
+				outputBuilder.WriteString(fmt.Sprintf("ssh_host=%s error: %s", host, err.Error()))
+				continue
+			}
+
+			outputPath := fmt.Sprintf("%s_%s", sanitizeHostForFileName(host), baseName)
+			if err := os.WriteFile(outputPath, data, 0644); err != nil {
+				outputBuilder.WriteString(fmt.Sprintf("ssh_host=%s error writing file: %s", host, err.Error()))
+				continue
+			}
+
+			successes++
+			outputBuilder.WriteString(fmt.Sprintf("ssh_host=%s fetched %s (%d bytes) to %s", host, resolvedPath, len(data), outputPath))
 		}
 
-		message := fmt.Sprintf("Successfully fetched %s (%d bytes) to %s", resolvedPath, len(data), outputPath)
-		return mcp.NewToolResultText(message), nil
+		if successes == 0 {
+			return nil, fmt.Errorf("failed to fetch %s from all SSH hosts", resolvedPath)
+		}
+
+		return mcp.NewToolResultText(outputBuilder.String()), nil
 	}
 }
 
@@ -128,12 +160,21 @@ func fetchViaSSHCommand(cfg *ServiceConfig, filePath string) ([]byte, error) {
 	}
 	defer session.Close()
 
+	applyShellSafeEnv(session)
+
 	output, err := session.CombinedOutput(fmt.Sprintf("cat %s", filePath))
 	if err != nil {
 		return nil, fmt.Errorf("failed to execute command: %w (output: %s)", err, string(output))
 	}
 
 	return output, nil
+}
+
+func sanitizeHostForFileName(host string) string {
+	sanitized := strings.TrimSpace(host)
+	sanitized = strings.ReplaceAll(sanitized, ":", "_")
+	sanitized = strings.ReplaceAll(sanitized, "/", "_")
+	return sanitized
 }
 
 func getEnvTrimmedService(key string) string {

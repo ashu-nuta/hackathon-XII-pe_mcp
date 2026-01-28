@@ -11,7 +11,7 @@ import (
 // CriticalLogs defines the critical_logs tool.
 func CriticalLogs() mcp.Tool {
 	return mcp.NewTool("critical_logs",
-		mcp.WithDescription("Fetch critical kernel, crash, and fatal service logs from the SSH host"),
+		mcp.WithDescription("Fetch critical kernel, crash, and fatal service logs from each SSH_HOST entry"),
 		mcp.WithString("lines",
 			mcp.Description("Optional number of lines to return per section (default 50, max 500)"),
 		),
@@ -42,7 +42,7 @@ func CriticalLogsHandler() server.ToolHandlerFunc {
 		}
 
 		command := buildCriticalLogsCommand(lookback, lines)
-		output, err := executeSSHCommandWithNewClient(cfg, command)
+		output, err := runSSHCommandOnHosts(cfg, command)
 		if err != nil {
 			return nil, err
 		}
